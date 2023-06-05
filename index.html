@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이해원 웹디자이너 포트폴리오</title>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="lib/jquery-3.7.0.min.js"></script>
+
+    <script>
+        window.onload = function (){
+            let hd = document.getElementsByTagName('header')[0];
+
+            window.onscroll = function (){
+                let scrollBar = window.scrollY;
+                console.log(scrollBar);
+                console.log(hd.offsetTop); // = 30
+                if(hd.offsetTop < scrollBar) {
+                    //hd한테 class명 on 추가
+                    hd.classList.add('on');
+                } else {
+                    hd.classList.remove('on');
+                }
+            }
+
+
+
+            //slide
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+                },
+                breakpoints: {
+                    340: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10,
+                    },
+                    640: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 20,
+                    },
+                    790: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 20,
+                    },
+                    1080: {
+                    slidesPerView: 4.5,
+                    spaceBetween: 40,
+                    },
+   
+                },
+            });
+
+            let mainVisual = document.querySelector('.main_visual');
+            let text1 = mainVisual.querySelector('#text1');
+            let text2 = mainVisual.querySelector('#text2');
+            let text3 = mainVisual.querySelector('#text3');
+            
+            text1.style.transform = 'translateX(-200%)'
+            text2.style.transform = 'translateX(200%)'
+            text3.style.transform = 'translateX(-200%)'
+            setTimeout(function (){
+                text1.style.transition = '1.5s'
+                text1.style.transform = 'translateX(0)'
+            },800) //setTimeout end
+
+            setTimeout(function (){
+                text2.style.transition = '1.5s'
+                text2.style.transform = 'translateX(0)'
+            },1600) //setTimeout end
+
+            setTimeout(function (){
+                text3.style.transition = '1.5s'
+                text3.style.transform = 'translateX(0)'
+            },2400) //setTimeout end
+        } //window.end
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            AOS.init();
+        }); //scroll event end
+
+        $(function(){
+            let menu = $('nav ul li');
+            menu.click (function(){
+                console.log($(this).position().left);
+                let moveLeft = $(this).position().left;
+                $('.menu_bar').stop().animate({
+                    'left': moveLeft
+                })
+            }) //menu.click end
+
+            /* $(window).resize(function(){
+                let worksItem = $('.web .item');
+                let itemText = $('.works .web .item .text')
+
+                if(window.outerWidth < 1080){
+                    worksItem.click (function(){
+                        worksItem.removeClass('on');
+
+                        $(this).addClass('on');
+                    })
+                }
+            }) */
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="#" onclick="return false">
+                    <img src="img/해원로고(완성본).png" alt="로고"/>
+                </a>
+            </h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#menu1">Home</a></li>
+                    <li><a href="#menu2">Profile</a></li>
+                    <li><a href="#menu3">Works</a></li>
+                    <li><a href="#menu4">Contact</a></li>
+                </ul>
+                <div class="menu_bar">
+                    <span>메뉴바</span>
+                </div> <!-- .menu_bar end -->
+            </nav>
+        </div> <!-- .inner end -->
+    </header>
+
+    <main>
+        <section class="main_visual" id="menu1">
+            <div id="text1">
+                <p>안녕하세요</p>
+                <div class="bar">
+                    <span>bar</span>
+                </div> <!-- .bar end -->
+            </div>
+
+            <div id="text2">
+                <p>신입 웹디자이너</p>
+                <div class="bar">
+                    <span>bar</span>
+                </div> <!-- .bar end -->
+            </div>
+
+            <div id="text3">
+                <p>이해원입니다</p>
+                <div class="bar">
+                    <span>bar</span>
+                </div> <!-- .bar end -->
+            </div>
+        </section> <!-- .main_visual end -->
+
+        <section class="profile" id="menu2">
+            <h1>Profile</h1>
+            <div class="inner">
+                <div class="wrap">
+                    <div data-aos="fade-right" data-aos-duration="1000">
+                        <div class="photo">
+                            <h2>
+                                <img src="img/LEE HAEWON.png" alt="이름">
+                            </h2>
+                            <figure>
+                                <img src="img/profile-photo (2).png" alt="증명사진">
+                            </figure>
+                            <p>1997.04.10</p>
+                            <p>즐겁게 일하는 디자이너 이해원입니다.</p>
+                        </div> <!-- .photo end -->
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-duration="1800">
+                        <div class="list">
+                            <div class="item">
+                                <h3>Education</h3>
+                                <p>2022.02 부경대학교 영어영문학부 졸업</p>
+                                <p>2023.06 UI/UX 반응형 웹디자인 & 웹퍼블리셔 양성 과정 수료</p>
+                            </div> <!-- item end -->
+
+                            <div class="item">
+                                <h3>Certification</h3>
+                                <p>2023.06 GTQ 포토샵 1급</p>
+                                <p>2023.06 웹디자인 기능사 필기 예정</p>
+                            </div> <!-- item end -->
+
+                            <div class="item">
+                                <h3>Skills</h3>
+                                <!-- <img src="img/html-5.png" alt="html">
+                                <img src="img/css-3.png" alt="css">
+                                <img src="img/javascript.png" alt="js">
+                                <img src="img/jquery.png" alt="jquery">
+                                <img src="img/icons8-photoshop-48.png" alt="photoshop">
+                                <img src="img/icons8-figma-48 (1).png" alt="figma">
+                                <img src="img/icons8-illustrator-48.png" alt="illustrator"> -->
+                                <ul>
+                                    <li>Html</li>
+                                    <li>Css</li>
+                                    <li>Js</li>
+                                    <li>Jq</li>
+                                    <li>Ps</li>
+                                    <li>Figma</li>
+                                    <li>Ai</li>
+                                </ul>
+                            </div> <!-- item end -->
+                        </div> <!-- .list end -->
+                    </div>
+                </div> <!-- .wrap end -->
+                <div data-aos="fade-down" data-aos-duration="1000">
+                    <div class="introduce">
+                        <p>안녕하세요. 신입 웹디자이너 <span>이해원</span>입니다.</p>
+                        <p>저는 심플하지만 그 안에 재미가 있는 디자인을 좋아합니다.</p>
+                        <p>또한, 사용자의 입장에서 생각해보고 트렌드에 맞는 디자인을 하려고 노력하는 디자이너입니다.</p>
+                    </div><!-- .introduce -->
+                </div>
+            </div> <!-- .inner end -->
+        </section> <!-- .profile end -->
+
+        <section class="works" id="menu3">
+            <div data-aos="zoom-in" data-aos-anchor-placement="center-bottom" data-aos-duration="600">
+                <h1>Works</h1>
+            </div>
+            <div class="inner">
+                <div class="web">
+                    <h2>Web/App</h2>
+                    <div class="list">
+                        <div data-aos="fade-up" data-aos-duration="600">
+                            <div class="item">
+                                <figure>
+                                    <img src="img/cledor_thum 1.png" alt="끌레도르"/>
+                                </figure>
+                                <div class="text">
+                                    <h3>끌레도르 반응형 웹사이트</h3>
+                                    <div class="info">
+                                        <p>디자인, 퍼블리싱</p>
+                                        <p>Tool: Figma, Adobe Photoshop, Html, Css, Js</p>
+                                    </div> <!-- .info end -->
+                                    <a href="https://mentoswon.github.io/cledor/" onclick="return false" target="_blank">SITE</a>
+                                </div> <!-- .text -->
+                            </div> <!-- .item end -->
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="700">
+                            <div class="item">
+                            <figure>
+                                <img src="img/musinsa_thum 1.png" alt="무신사"/>
+                            </figure>
+                            <div class="text">
+                                <h3>무신사 웹사이트 리디자인</h3>
+                                <div class="info">
+                                    <p>디자인, 퍼블리싱</p>
+                                    <p>Tool: Adobe Photoshop, Html, Css</p>
+                                </div> <!-- .info end -->
+                                <a href="#" onclick="return false">SITE</a>
+                            </div> <!-- .text -->
+                            </div> <!-- .item end -->
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="600">
+                            <div class="item">
+                                <figure>
+                                    <img src="img/groundseesaw_thum 1.png" alt="그라운드시소"/>
+                                </figure>
+                                <div class="text">
+                                    <h3>그라운드시소 웹사이트 리디자인</h3>
+                                    <div class="info">
+                                        <p>디자인, 퍼블리싱</p>
+                                        <p>Tool: Adobe Photoshop, Html, Css</p>
+                                    </div> <!-- .info end -->
+                                    <a href="https://mentoswon.github.io/groundseesaw/" target="_blank" onclick="return false">SITE</a>
+                                    <a href="#" onclick="return false">PDF</a>
+                                </div> <!-- .text -->
+                            </div> <!-- .item end -->
+                        </div>
+
+                        
+                        <div data-aos="fade-up" data-aos-duration="500">
+                            <div class="item">
+                                <figure>
+                                    <img src="img/viet_thum 1.png" alt="비에메종"/>
+                                </figure>
+                                <div class="text">
+                                    <h3>비에메종 반응형 웹사이트</h3>
+                                    <div class="info">
+                                        <p>퍼블리싱</p>
+                                        <p>Tool: Figma, Html, Css, Js</p>
+                                    </div> <!-- .info end -->
+                                    <a href="#" onclick="return false">SITE</a>
+                                </div> <!-- .text -->
+                            </div> <!-- .item end -->
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="600">
+                            <div class="item">
+                                <figure>
+                                    <img src="img/gov_thum 1.png" alt="정부24"/>
+                                </figure>
+                                <div class="text">
+                                    <h3>정부 24 앱 리디자인</h3>
+                                    <div class="info">
+                                        <p>디자인</p>
+                                        <p>Tool: Figma, Adobe Photoshop</p>
+                                    </div> <!-- .info end -->
+                                    <a href="#" onclick="return false">PDF</a>
+                                </div> <!-- .text -->
+                            </div> <!-- .item end -->
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="750">
+                            <div class="item">
+                                <figure>
+                                    <img src="img/3ce_thum 1.png" alt="3CE"/>
+                                </figure>
+                                <div class="text">
+                                    <h3>3CE 앱 리디자인</h3>
+                                    <div class="info">
+                                        <p>디자인, 퍼블리싱</p>
+                                        <p>Tool: Figma, Adobe Photoshop, Html, Css, Js</p>
+                                    </div> <!-- .info end -->
+                                    <a href="https://mentoswon.github.io/3CE/" onclick="return false">SITE</a>
+                                    <a href="#" onclick="return false">PDF</a>
+                                </div> <!-- .text -->
+                            </div> <!-- .item end -->
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="600">
+                            <div class="item">
+                                <figure>
+                                    <img src="img/manyo_thum 1.png" alt="마녀공장"/>
+                                </figure>
+                                <div class="text">
+                                    <h3>마녀공장 앱 리디자인</h3>
+                                    <div class="info">
+                                        <p>디자인, 퍼블리싱</p>
+                                        <p>Tool: Figma, Adobe Photoshop, Html, Css, Js</p>
+                                    </div> <!-- .info end -->
+                                    <a href="https://mentoswon.github.io/manyo/" onclick="return false">SITE</a>
+                                    <a href="#" onclick="return false">PDF</a>
+                                </div> <!-- .text -->
+                            </div> <!-- .item end -->
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="500">
+                            <div class="item">
+                                <figure>
+                                    <img src="img/paris-thum 1.png" alt="파리바게뜨"/>
+                                </figure>
+                                <div class="text">
+                                    <h3>파리바게뜨</h3>
+                                    <div class="info">
+                                        <p>모작, 퍼블리싱</p>
+                                        <p>Tool: Adobe Photoshop, Html, Css</p>
+                                    </div> <!-- .info end -->
+                                    <a href="#" onclick="return false">SITE</a>
+                                </div> <!-- .text -->
+                            </div> <!-- .item end -->
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="600">
+                            <div class="item">
+                                <figure>
+                                    <img src="img/uni_thum 1.png" alt="유니테크"/>
+                                </figure>
+                                <div class="text">
+                                    <h3>유니테크</h3>
+                                    <div class="info">
+                                        <p>모작, 퍼블리싱</p>
+                                        <p>Tool: Html, Css</p>
+                                    </div> <!-- .info end -->
+                                    <a href="#" onclick="return false">SITE</a>
+                                </div> <!-- .text -->
+                            </div> <!-- .item end -->
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="700">
+                            <div class="item">
+                                <figure>
+                                    <img src="img/locallive_thum 1.png" alt="로컬라이브"/>
+                                </figure>
+                                <div class="text">
+                                    <h3>로컬라이브</h3>
+                                    <div class="info">
+                                        <p>모작, 퍼블리싱</p>
+                                        <p>Tool: Adobe Photoshop, Html, Css</p>
+                                    </div> <!-- .info end -->
+                                    <a href="#" onclick="return false">SITE</a>
+                                </div> <!-- .text -->
+                            </div> <!-- .item end -->
+                        </div>
+                    </div> <!-- .list end -->
+                </div> <!-- .web end -->
+            </div> <!-- .inner end -->
+            
+            <div class="design">
+                <h2>Design</h2>
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/innisfree.jpg" alt="img">
+                                </figure>
+                                <p>Made by Adobe Photoshop</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/sns-camping.jpg" alt="img">
+                                </figure>
+                                <p>Made by Adobe Photoshop</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/lilybyred.png" alt="img">
+                                </figure>
+                                <p>Made by Adobe Illustrator</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/luxury_jewelry.png" alt="img">
+                                </figure>
+                                <p>Made by Adobe Illustrator</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/sns-busan.jpg" alt="img">
+                                </figure>
+                                <p>Made by Adobe Photoshop</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/subway.jpg" alt="img">
+                                </figure>
+                                <p>Made by Adobe Photoshop</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/eee.png" alt="img">
+                                </figure>
+                                <p>Made by Adobe Illustrator</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/wendy.png" alt="img">
+                                </figure>
+                                <p>Made by Adobe Illustrator</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/travel.png" alt="img">
+                                </figure>
+                                <p>Made by Adobe Photoshop</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/colon_sports.png" alt="img">
+                                </figure>
+                                <p>Made by Adobe Photoshop</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/summer_nail.png" alt="img">
+                                </figure>
+                                <p>Made by Adobe Illustrator</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/ticket.png" alt="img">
+                                </figure>
+                                <p>Made by Adobe Photoshop</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#" onclick="return false">
+                                <figure>
+                                    <img src="img/blue-interior.png" alt="img">
+                                </figure>
+                                <p>Made by Adobe Photoshop</p>
+                            </a>
+                        </div> <!-- .swiper-slide end -->
+                    </div>
+                </div>
+            </div> <!-- .design end -->
+        </section> <!-- .works end -->
+    </main>
+
+    <footer id="menu4">
+        <h1>Contact</h1>
+        <div class="inner">
+            <div class="wrap">
+                <div class="contact">
+                    <ul>
+                        <li><span>Kakaotalk</span><a href="https://open.kakao.com/o/sGlwNInf" onclick="return false">Open Kakaotalk</a></li>
+                        <li><span>Email</span><a href="mailto:woon_nn@naver.com" onclick="return false">woon_nn@naver.com</a></li>
+                    </ul>
+                </div> <!-- .contact end -->
+                <div class="btn">
+                    <ul>
+                        <li><a href="#" onclick="return false">이력서보기</a></li>
+                        <li><a href="#" onclick="return false">포트폴리오 PDF</a></li>
+                    </ul>
+                </div> <!-- .btn end -->
+            </div> <!-- .wrap end -->
+            <p>©Copyright 2023 이해원. All rights reserved.</p> 
+            <p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오로 제작되었습니다.</p> 
+        </div> <!-- .inner end   -->
+    </footer>
+</body>
+</html>
