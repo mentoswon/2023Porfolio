@@ -144,7 +144,10 @@ header .inner nav .menu_bar span {
     margin-bottom: 10px;
     color: #555;
 }
-
+.profile .inner .wrap .list .item span {
+    font-size: 1.6rem;
+    color: #888;
+}
 .profile .inner .wrap .list .item ul li {
     width: 85px;
     height: 85px;
