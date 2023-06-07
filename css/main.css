@@ -74,7 +74,6 @@ header .inner nav .menu_bar span {
 .main_visual > div p {
     font-family: 'MapoBackpacking';
     font-size: 8rem;
-    word-break: keep-all;
 }
 .main_visual > div .bar {
     height: 10px;
@@ -522,7 +521,7 @@ footer .inner p {
         width: 45vw;
     }
     .main_visual > div p {
-        font-size: 5rem;
+        font-size: 3.8rem;
     }
     .main_visual > div .bar {
         width: 50vw;
