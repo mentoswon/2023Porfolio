@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이해원 웹디자이너 포트폴리오</title>
+    <title>이해원 포트폴리오</title>
     <link rel="stylesheet" href="css/main.css"/>
 
     <!-- Link Swiper's CSS -->
@@ -72,30 +72,6 @@
    
                 },
             });
-
-            let mainVisual = document.querySelector('.main_visual');
-            let text1 = mainVisual.querySelector('#text1');
-            let text2 = mainVisual.querySelector('#text2');
-            let text3 = mainVisual.querySelector('#text3');
-            
-            text1.style.transform = 'translateX(-200%)'
-            text2.style.transform = 'translateX(200%)'
-            text3.style.transform = 'translateX(-200%)'
-            setTimeout(function (){
-                text1.style.transition = '1.5s'
-                text1.style.transform = 'translateX(0)'
-            },800) //setTimeout end
-
-            setTimeout(function (){
-                text2.style.transition = '1.5s'
-                text2.style.transform = 'translateX(0)'
-            },1600) //setTimeout end
-
-            setTimeout(function (){
-                text3.style.transition = '1.5s'
-                text3.style.transform = 'translateX(0)'
-            },2400) //setTimeout end
-
             
         } //window.end
     </script>
@@ -124,14 +100,13 @@
     <header>
         <div class="inner">
             <h1>
-                <a href="#" onclick="return false">
+                <a href="#menu2">
                     <img src="img/해원로고(완성본).png" alt="로고"/>
                 </a>
             </h1>
 
             <nav>
                 <ul>
-                    <li><a href="#menu1">Home</a></li>
                     <li><a href="#menu2">Profile</a></li>
                     <li><a href="#menu3">Works</a></li>
                     <li><a href="#menu4">Contact</a></li>
@@ -144,29 +119,6 @@
     </header>
 
     <main>
-        <section class="main_visual" id="menu1">
-            <div id="text1">
-                <p>안녕하세요</p>
-                <div class="bar">
-                    <span>bar</span>
-                </div> <!-- .bar end -->
-            </div>
-
-            <div id="text2">
-                <p>신입 웹디자이너</p>
-                <div class="bar">
-                    <span>bar</span>
-                </div> <!-- .bar end -->
-            </div>
-
-            <div id="text3">
-                <p>이해원입니다</p>
-                <div class="bar">
-                    <span>bar</span>
-                </div> <!-- .bar end -->
-            </div>
-        </section> <!-- .main_visual end -->
-
         <section class="profile" id="menu2">
             <h1>Profile</h1>
             <div class="inner">
@@ -180,7 +132,7 @@
                                 <img src="img/profile-photo (2).png" alt="증명사진">
                             </figure>
                             <p>1997.04.10</p>
-                            <p>즐겁게 일하는 디자이너 이해원입니다.</p>
+                            <p>즐겁게 일하는 풀스택 개발자 이해원입니다.</p>
                         </div> <!-- .photo end -->
                     </div>
 
@@ -190,17 +142,23 @@
                                 <h3>Education</h3>
                                 <p>2022.02 부경대학교 영어영문학부 졸업</p>
                                 <p>2023.06 UI/UX 반응형 웹디자인 & 웹퍼블리셔 양성 과정 수료</p>
+                                <p>2024.09 핀테크 디지털 금융서비스 자바 개발자 양성 과정 수료</p>
                             </div> <!-- item end -->
 
                             <div class="item">
                                 <h3>Certification</h3>
                                 <p>2023.06 GTQ 포토샵 1급</p>
-                                <p>2023.06 웹디자인 기능사 필기 예정</p>
+                                <p>2023.06 웹디자인 기능사 필기</p>
+                                <p>2024.09 SQLD</p>
                             </div> <!-- item end -->
 
                             <div class="item">
                                 <h3>Skills</h3>
                                 <ul>
+                                    <li>Java</li>
+                                    <li>Spring Framework</li>
+                                    <li>MySql</li>
+                                    <li>Oracle</li>
                                     <li>Html</li>
                                     <li>Css</li>
                                     <li>Js</li>
@@ -215,9 +173,9 @@
                 </div> <!-- .wrap end -->
                 <div data-aos="fade-down" data-aos-duration="1000">
                     <div class="introduce">
-                        <p>안녕하세요. 행복으로 가득 찬 신입 웹디자이너 <span>이해원</span>입니다.</p>
-                        <p><span>도전</span>적이고 <span>재미</span>있는 디자인에 더해 <span> 실용성</span>까지 갖춘 사이트를 구현하려고 노력하고있습니다.</p>
-                        <p>나아가 열정을 가지고 배우는 자세로 임하며 <span>소통하는 웹디자이너</span>가 되겠습니다. </p>
+                        <p>안녕하세요. 신입 풀스택 개발자 <span>이해원</span>입니다.</p>
+                        <p>백엔드와 프론트엔드 모두에 열정을 가지고 있으며 <br> 다양한 기술 스택을 활용해 <span>사용자 친화적인</span> 웹 애플리케이션을 개발하는 데 집중하고 있습니다. </p>
+                        <p><span>지속적인 학습</span>을 통해 새로운 도전과 문제 해결에 앞장서고자 합니다.</p>
                     </div><!-- .introduce -->
                 </div>
             </div> <!-- .inner end -->
@@ -228,8 +186,68 @@
                 <h1>Works</h1>
             </div>
             <div class="inner">
+                <div class="project">
+                    <h2>Project</h2>
+                    <div class="proList">
+                        <div id="pro01">
+                            <div class="proThumnail">
+                                <figure>
+                                    <img src="img/withmeThumnail.png" alt="위드미"/>
+                                </figure>
+                                <div class="hoverInfo">
+                                    <a href="http://c5d2403t2.itwillbs.com/with_me/" target="_blank"><div>사이트 보기</div></a>
+                                    <a href="https://docs.google.com/presentation/d/1MStnAQOIqa7TXkFcgs4TD49V7g2_WsvPSQ4fREsXK10/edit#slide=id.g4dfce81f19_0_45" target="_blank"><div>PPT</div></a>
+                                </div>
+                            </div>
+                            <div class="proInfo">
+                                <div class="theme">
+                                    <span>주제 : </span>
+                                    <span>&nbsp; 핀테크 활용 크라우드 펀딩 서비스 구축</span>
+                                </div>
+                                <div class="myjob">
+                                    <span>내가 기여한 부분</span>
+                                    <ul>
+                                        <li>&nbsp;&nbsp;- </li>
+                                        <li>&nbsp;&nbsp;- </li>
+                                        <li>&nbsp;&nbsp;- </li>
+                                        <li>&nbsp;&nbsp;- </li>
+                                        <li>&nbsp;&nbsp;- </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="pro02">
+                            <div class="proThumnail">
+                                <figure>
+                                    <img src="img/5megaV.png" alt="오메가"/>
+                                </figure>
+                                <div class="hoverInfo">
+                                    <a href="http://c5d2403t2.itwillbs.com/5MegaVCinema/" target="_blank"><div>사이트 보기</div></a>
+                                    <a href="https://docs.google.com/presentation/d/1f-DVB0dTw3BgcX4PcS1ZFrTe3SLxmf0yAcJZC4HsWhA/edit#slide=id.g2768ca7ef44_0_65" target="_blank"><div>PPT</div></a>
+                                </div>
+                            </div>
+                            <div class="proInfo">
+                                <div class="theme">
+                                    <span>주제 : </span>
+                                    <span>&nbsp; 결제 API 를 활용한 MVC 웹 서비스 구축</span>
+                                </div>
+                                <div class="myjob">
+                                    <span>내가 기여한 부분</span>
+                                    <ul>
+                                        <li>&nbsp;&nbsp;- </li>
+                                        <li>&nbsp;&nbsp;- </li>
+                                        <li>&nbsp;&nbsp;- </li>
+                                        <li>&nbsp;&nbsp;- </li>
+                                        <li>&nbsp;&nbsp;- </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="web">
-                    <h2>Web/App</h2>
+                    <h2>Publishing</h2>
                     <div class="list">
                         <div data-aos="fade-up" data-aos-duration="600">
                             <div class="item">
@@ -535,7 +553,7 @@
             <div class="wrap">
                 <div class="contact">
                     <ul>
-                        <li><span>Kakaotalk</span><a href="https://open.kakao.com/o/sGlwNInf" target="_blank">Open Kakaotalk</a></li>
+                        <li><span>Kakaotalk</span><a href="https://open.kakao.com/o/sLzAFvPg" target="_blank">Open Kakaotalk</a></li>
                         <li><span>Email</span><a href="mailto:woon_nn@naver.com" target="_blank">woon_nn@naver.com</a></li>
                     </ul>
                 </div> <!-- .contact end -->
@@ -546,7 +564,7 @@
                     </ul>
                 </div> <!-- .btn end -->
             </div> <!-- .wrap end -->
-            <p>©Copyright 2023 이해원. All rights reserved.</p> 
+            <p>©Copyright 2024 이해원. All rights reserved.</p> 
             <p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오로 제작되었습니다.</p> 
         </div> <!-- .inner end   -->
     </footer>
