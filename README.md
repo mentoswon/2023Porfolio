@@ -1,1 +1,1 @@
-# 2024 LeeHaewon's Porfolio
+# 2024 Lee Haewon's Porfolio
